@@ -1556,5 +1556,11 @@
       <field name="AOA" type="float" units="deg">Angle of Attack (degrees)</field>
       <field name="SSA" type="float" units="deg">Side Slip Angle (degrees)</field>
     </message>
+    <message id="11030" name="WHEEL_DISTANCE">
+      <description>Cumulative distances traveled by each wheel in meters (forward rotations increase these values, backward - decrease).</description>
+      <field name="time_usec" type="uint64_t">Timestamp (microseconds, synced to UNIX time or since system boot)</field>
+      <field type="uint8_t" name="count">Number of wheels reported</field>
+      <field type="float[4]" name="distance" units="m">Distance traveled by each wheel (m)</field>
+    </message>
   </messages>
 </mavlink>
